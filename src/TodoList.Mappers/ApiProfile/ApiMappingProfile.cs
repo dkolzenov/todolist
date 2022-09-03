@@ -1,4 +1,4 @@
-﻿namespace TodoList.Mappers.Profile
+﻿namespace TodoList.Mappers.ApiProfile
 {
     using AutoMapper;
 
