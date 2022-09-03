@@ -1,4 +1,8 @@
 using TodoList.Api.Extensions;
+using TodoList.Data.Repositories.Interfaces;
+using TodoList.Data.Repositories.Task;
+using TodoList.Services.Interfaces;
+using TodoList.Services.Task;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddCustomSqliteContext(builder.Configuration);
 builder.Services.AddCustomAutoMapper();
+builder.Services.AddSingleton<ITaskRepository, TaskRepository>();
+builder.Services.AddSingleton<ITaskService, TaskService>();
 
 var app = builder.Build();
 
