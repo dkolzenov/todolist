@@ -1,8 +1,12 @@
+using TodoList.Api.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddCustomSqliteContext(builder.Configuration);
+builder.Services.AddCustomAutoMapper();
 
 var app = builder.Build();
 

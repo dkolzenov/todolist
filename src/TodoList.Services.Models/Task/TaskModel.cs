@@ -1,9 +1,6 @@
-﻿namespace TodoList.Data.Entities.Task
+﻿namespace TodoList.Services.Models.Task
 {
-    using System.ComponentModel.DataAnnotations.Schema;
-
-    [Table("Task")]
-    public class TaskEntity
+    public class TaskModel
     {
         public int Id { get; set; }
 
