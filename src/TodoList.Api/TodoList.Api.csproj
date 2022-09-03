@@ -15,6 +15,8 @@
   <ItemGroup>
     <ProjectReference Include="..\TodoList.Data\TodoList.Data.csproj" />
     <ProjectReference Include="..\TodoList.Mappers\TodoList.Mappers.csproj" />
+    <ProjectReference Include="..\TodoList.Services.Models\TodoList.Services.Models.csproj" />
+    <ProjectReference Include="..\TodoList.Services\TodoList.Services.csproj" />
   </ItemGroup>
 
 </Project>
