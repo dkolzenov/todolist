@@ -25,27 +25,27 @@
         }
 
         [HttpPost]
-        public async Task<ActionResult<bool>> AddTaskAsync(TaskModel taskModel)
+        public async Task<ActionResult<TaskModel>> AddTaskAsync(TaskModel task)
         {
-            var result = await _taskService.AddTaskAsync(taskModel);
+            var addedTask = await _taskService.AddTaskAsync(task);
 
-            return result;
+            return addedTask;
         }
 
         [HttpPut]
-        public async Task<ActionResult<bool>> UpdateTaskAsync(TaskModel taskModel)
+        public async Task<ActionResult<TaskModel>> UpdateTaskAsync(TaskModel task)
         {
-            var result = await _taskService.UpdateTaskAsync(taskModel);
+            var updatedTask = await _taskService.UpdateTaskAsync(task);
 
-            return result;
+            return updatedTask;
         }
 
         [HttpDelete]
-        public async Task<ActionResult<bool>> RemoveTaskAsync(TaskModel taskModel)
+        public async Task<ActionResult<TaskModel>> RemoveTaskAsync(TaskModel task)
         {
-            var result = await _taskService.RemoveTaskAsync(taskModel);
+            var removedTask = await _taskService.RemoveTaskAsync(task);
 
-            return result;
+            return removedTask;
         }
     }
 }
