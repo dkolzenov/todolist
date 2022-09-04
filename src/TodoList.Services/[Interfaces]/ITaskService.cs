@@ -6,10 +6,10 @@
     {
         Task<List<TaskModel>> GetAllTasksAsync();
 
-        Task<bool> AddTaskAsync(TaskModel taskModel);
+        Task<TaskModel> AddTaskAsync(TaskModel taskModel);
 
-        Task<bool> UpdateTaskAsync(TaskModel taskModel);
+        Task<TaskModel> UpdateTaskAsync(TaskModel taskModel);
 
-        Task<bool> RemoveTaskAsync(TaskModel taskModel);
+        Task<TaskModel> RemoveTaskAsync(TaskModel taskModel);
     }
 }

@@ -1,18 +1,20 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+
 using TodoList.Api.Extensions;
-using TodoList.Data.Repositories.Interfaces;
-using TodoList.Data.Repositories.Task;
-using TodoList.Services.Interfaces;
-using TodoList.Services.Task;
+using TodoList.Di.Modules;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(
+    builder => builder.RegisterModule(new ApiDiModule()));
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddCustomSqliteContext(builder.Configuration);
 builder.Services.AddCustomAutoMapper();
-builder.Services.AddScoped<ITaskRepository, TaskRepository>();
-builder.Services.AddScoped<ITaskService, TaskService>();
 
 var app = builder.Build();
 

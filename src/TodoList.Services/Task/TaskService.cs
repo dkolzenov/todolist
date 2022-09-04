@@ -25,7 +25,7 @@
         {
             try
             {
-                var result = await _taskRepository.GetAllAsync();
+                List<TaskEntity> result = await _taskRepository.GetAllAsync();
 
                 var tasks = _mapper.Map<List<TaskModel>>(result);
 
@@ -37,51 +37,59 @@
             }
         }
 
-        public async Task<bool> AddTaskAsync(TaskModel taskModel)
+        public async Task<TaskModel> AddTaskAsync(TaskModel taskModel)
         {
             try
             {
-                var task = _mapper.Map<TaskEntity>(taskModel);
+                var taskEntity = _mapper.Map<TaskEntity>(taskModel);
 
-                var result = await _taskRepository.AddAsync(task);
+                TaskEntity result = await _taskRepository.AddAsync(taskEntity);
 
-                return result;
+                var addedTask = _mapper.Map<TaskModel>(result);
+
+                return addedTask;
             }
             catch (Exception ex)
             {
-                return await Task.FromException<bool>(ex);
+                return await Task.FromException<TaskModel>(ex);
             }
         }
 
-        public async Task<bool> UpdateTaskAsync(TaskModel taskModel)
+        public async Task<TaskModel> UpdateTaskAsync(TaskModel taskModel)
         {
             try
             {
-                var task = _mapper.Map<TaskEntity>(taskModel);
+                var taskEntity = _mapper.Map<TaskEntity>(taskModel);
 
-                var result = await _taskRepository.UpdateAsync(task);
+                TaskEntity result = await _taskRepository
+                    .UpdateAsync(taskEntity);
 
-                return result;
+                var updatedTask = _mapper.Map<TaskModel>(result);
+
+                return updatedTask;
             }
             catch (Exception ex)
             {
-                return await Task.FromException<bool>(ex);
+                return await Task.FromException<TaskModel>(ex);
             }
         }
 
-        public async Task<bool> RemoveTaskAsync(TaskModel taskModel)
+        public async Task<TaskModel> RemoveTaskAsync(TaskModel taskModel)
         {
             try
             {
-                var task = _mapper.Map<TaskEntity>(taskModel);
+                var taskEntity = _mapper.Map<TaskEntity>(taskModel);
 
-                var result = await _taskRepository.RemoveAsync(task);
+                TaskEntity result = await _taskRepository
+                    .RemoveAsync(taskEntity);
 
-                return result;
+                var removedTask = _mapper.Map<TaskModel>(result);
+
+                return removedTask;
             }
             catch (Exception ex)
             {
-                return await Task.FromException<bool>(ex);
+                return await Task.FromException<TaskModel>(ex);
             }
         }
     }

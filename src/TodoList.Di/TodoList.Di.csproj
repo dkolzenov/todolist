@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TodoList.Data\TodoList.Data.csproj" />
+    <ProjectReference Include="..\TodoList.Services\TodoList.Services.csproj" />
+  </ItemGroup>
+
 </Project>

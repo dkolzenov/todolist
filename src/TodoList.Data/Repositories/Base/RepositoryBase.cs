@@ -34,7 +34,7 @@
             }
         }
 
-        public async Task<bool> AddAsync(TEntity entity)
+        public async Task<TEntity> AddAsync(TEntity entity)
         {
             try
             {
@@ -42,17 +42,15 @@
 
                 await _context.SaveChangesAsync();
 
-                var isAdded = result.State == EntityState.Added;
-
-                return isAdded;
+                return result.Entity;
             }
             catch (Exception ex)
             {
-                return await Task.FromException<bool>(ex);
+                return await Task.FromException<TEntity>(ex);
             }
         }
 
-        public async Task<bool> UpdateAsync(TEntity entity)
+        public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             try
             {
@@ -60,17 +58,15 @@
 
                 await _context.SaveChangesAsync();
 
-                var isModified = result.State == EntityState.Modified;
-
-                return isModified;
+                return result.Entity;
             }
             catch (Exception ex)
             {
-                return await Task.FromException<bool>(ex);
+                return await Task.FromException<TEntity>(ex);
             }
         }
 
-        public async Task<bool> RemoveAsync(TEntity entity)
+        public async Task<TEntity> RemoveAsync(TEntity entity)
         {
             try
             {
@@ -78,13 +74,11 @@
 
                 await _context.SaveChangesAsync();
 
-                var isDeleted = result.State == EntityState.Deleted;
-
-                return isDeleted;
+                return result.Entity;
             }
             catch (Exception ex)
             {
-                return await Task.FromException<bool>(ex);
+                return await Task.FromException<TEntity>(ex);
             }
         }
 
