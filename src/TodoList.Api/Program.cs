@@ -14,6 +14,7 @@ builder.Host.ConfigureContainer<ContainerBuilder>(
 
 builder.Services.AddControllers();
 builder.Services.AddCustomSqliteContext(builder.Configuration);
+builder.Services.AddCustomCorsPolicy(builder.Configuration);
 builder.Services.AddCustomAutoMapper();
 
 var app = builder.Build();
@@ -21,6 +22,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
+
+app.UseCustomCorsPolicy();
 
 app.UseAuthorization();
 
