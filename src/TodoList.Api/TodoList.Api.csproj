@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.8" />
@@ -14,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TodoList.Data\TodoList.Data.csproj" />
+    <ProjectReference Include="..\TodoList.Di\TodoList.Di.csproj" />
     <ProjectReference Include="..\TodoList.Mappers\TodoList.Mappers.csproj" />
     <ProjectReference Include="..\TodoList.Services.Models\TodoList.Services.Models.csproj" />
     <ProjectReference Include="..\TodoList.Services\TodoList.Services.csproj" />
