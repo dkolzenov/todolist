@@ -19,8 +19,8 @@
                 o => o.UseSqlite(connectionString));
 
             services.BuildServiceProvider()
-                .GetService<ApplicationDbContext>()
-                !.Database
+                .GetService<ApplicationDbContext>()!
+                .Database
                 .EnsureCreated();
         }
     }
