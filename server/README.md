@@ -2,7 +2,7 @@
 
 Web API written on [C#](https://docs.microsoft.com/en-us/dotnet/csharp) using [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) framework and implemented using [N-Layer](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier) architecture.
 
-# Technology stack
+## Technology stack
 
 * [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 * [ASP.NET Core 6.0](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0)
