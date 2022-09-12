@@ -1,6 +1,6 @@
 # Overview
 
-TodoList Web app <u>*currently in developed*</u> in scope of the discipline "Development of Internet-applications".
+TodoList Web app ***currently in developed*** in scope of the discipline *"Development of Internet-applications"*.
 
 ## Client (front-end)
 
