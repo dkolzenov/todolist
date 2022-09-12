@@ -1,6 +1,6 @@
 # Server (back-end)
 
-Web API written on [C#](https://docs.microsoft.com/en-us/dotnet/csharp) using [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) framework and implemented using [N-Layer](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier) architecture.
+Web API written on [C#](https://docs.microsoft.com/en-us/dotnet/csharp) using [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) framework following [REST](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) conventions and implemented using [N-Layer](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier) architecture.
 
 ## Technology stack
 
