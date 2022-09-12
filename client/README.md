@@ -1,6 +1,6 @@
 # Client (front-end)
 
-Web application written on [JavaScript](https://www.javascript.com) using [React](https://reactjs.org)-[Redux](https://redux.js.org) libraries.
+Web Single Page Application (SPA) written on [JavaScript](https://www.javascript.com) using [React](https://reactjs.org)-[Redux](https://redux.js.org) libraries.
 
 ## Technology stack
 
