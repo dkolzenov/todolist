@@ -21,7 +21,7 @@
             services.BuildServiceProvider()
                 .GetService<ApplicationDbContext>()!
                 .Database
-                .EnsureCreated();
+                .Migrate();
         }
     }
 }
