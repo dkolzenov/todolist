@@ -1,4 +1,4 @@
-class ApiClientService {
+export class ApiClientService {
   async get(url) {
     const configInitGet = {
       method: 'GET'
@@ -43,5 +43,3 @@ class ApiClientService {
     return response;
   }
 }
-
-export default ApiClientService;
